@@ -17,7 +17,6 @@ public class ItemRestrictor extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Display a startup message with ANSI escape codes for colors
         getLogger().info("\u001B[32m================================");
         getLogger().info("\u001B[32m  ItemRestrictor Plugin Enabled");
         getLogger().info("\u001B[32m================================");
@@ -26,9 +25,7 @@ public class ItemRestrictor extends JavaPlugin {
         getLogger().info("\u001B[33mDescription: " + getDescription().getDescription());
         getLogger().info("\u001B[32m================================");
 
-        // Your other initialization code here
         saveDefaultConfig();
-        // Register events and commands
         getServer().getPluginManager().registerEvents(new ItemRestrictionListener(this), this);
         Objects.requireNonNull(getCommand("itemrestrictor")).setExecutor(new ReloadCommand(this));
     }
