@@ -1,0 +1,10 @@
+name: ItemRestrictor
+version: '${project.version}'
+main: dev.daniboy.itemrestrictor.ItemRestrictor
+api-version: '1.20'
+author: Daniboy
+description: A Bukkit plugin that restricts the usage of certain items in specific worlds.
+commands:
+  itemrestrictor:
+    description: Reloads the plugin configuration
+    usage: /itemrestrictor reload
