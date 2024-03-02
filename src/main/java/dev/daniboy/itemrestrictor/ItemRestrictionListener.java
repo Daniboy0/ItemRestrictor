@@ -26,7 +26,7 @@ public class ItemRestrictionListener implements Listener {
 		if (event.getItem() != null && isItemRestricted(event.getItem().getType().toString(), worldName)) {
 			String message = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("worlds." + worldName + ".restriction_message"));
 			player.sendMessage(message);
-			event.setCancelled(true); // Cancel the event to prevent usage
+			event.setCancelled(true);
 		}
 	}
 
